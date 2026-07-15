@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "name": "Tiptrip — Hermes Agent Editorial Print Adaptation",
+    "description": "A two-ink digital editorial system extracted from the Hermes Agent website and adapted for Tiptrip: saturated cobalt fields, warm paper-white panels, high-contrast classical display typography, monospaced annotations, engraved halftone imagery, radial rules, and restrained hand-drawn interaction traces.",
+    "source_references": [
+      "https://hermes-agent.nousresearch.com/",
+      "Tiptrip current promotional copy and Android product interface"
+    ],
+    "created_at": "2026-07-13"
+  },
+  "design_system": {
+    "color": {
+      "palette_type": "monochromatic two-ink with semantic exception",
+      "primary": {"hex": "#0000F2", "role": "dominant cobalt field, line art, headings, borders, and interactive emphasis"},
+      "secondary": {"hex": "#F5F5F5", "role": "paper-white foreground, editorial panels, type, and inverted controls"},
+      "accent": {"hex": "#FF5138", "role": "Tiptrip-only semantic accent for food markers; used sparingly outside the extracted two-ink system"},
+      "neutral": {
+        "scale": ["#FFFFFF", "#F5F5F5", "#E8E8E2", "#B7B7B1", "#777771", "#2A2A36", "#11111B", "#0000F2"],
+        "usage": "Reference is intentionally almost neutral-free: paper white and cobalt replace conventional gray hierarchy; opacity supplies secondary levels."
+      },
+      "semantic": {"success": "#00A86B", "warning": "#D88B00", "error": "#D93535", "info": "#0000F2"},
+      "surface": {"background": "#0000F2", "card": "#F5F5F5", "elevated": "#FFFFFF"},
+      "contrast_strategy": "Hard two-tone inversion: white on cobalt for immersive stages and cobalt on paper for information-dense panels."
+    },
+    "typography": {
+      "type_scale": {
+        "display": {"size": "clamp(5.5rem, 15vw, 14rem)", "weight": "300", "line_height": "0.82", "tracking": "0.015em"},
+        "heading_1": {"size": "clamp(4.2rem, 9vw, 8rem)", "weight": "300", "line_height": "0.88", "tracking": "0.03em"},
+        "heading_2": {"size": "clamp(2.5rem, 5vw, 4.5rem)", "weight": "300", "line_height": "0.96", "tracking": "0.01em"},
+        "heading_3": {"size": "clamp(1.7rem, 3vw, 2.5rem)", "weight": "400", "line_height": "1", "tracking": "0"},
+        "body": {"size": "0.94rem", "weight": "500", "line_height": "1.55", "tracking": "0.045em"},
+        "body_small": {"size": "0.76rem", "weight": "500", "line_height": "1.5", "tracking": "0.075em"},
+        "caption": {"size": "0.64rem", "weight": "600", "line_height": "1.35", "tracking": "0.13em"},
+        "overline": {"size": "0.58rem", "weight": "700", "line_height": "1.3", "tracking": "0.18em"}
+      },
+      "font_families": {
+        "heading": "'Bodoni Moda', 'Times New Roman', serif",
+        "body": "'Noto Serif SC', 'Songti SC', serif",
+        "mono": "'IBM Plex Mono', 'Courier New', monospace"
+      },
+      "font_style_notes": "A high-contrast Didone/editorial serif carries monumental headlines, while dense uppercase monospaced text evokes technical captions and printed research notes."
+    },
+    "spacing": {
+      "base_unit": "4px",
+      "scale": ["4px", "8px", "12px", "16px", "24px", "32px", "48px", "72px", "104px", "160px"],
+      "content_density": "spacious hero and footer; dense magazine grids",
+      "section_rhythm": "Immersive cobalt stages alternate with white editorial sheets; vertical rhythm jumps between 120–180px section openings and compact 20–32px card internals."
+    },
+    "layout": {
+      "grid_system": "Centered editorial canvas with three-column feature sheets and large asymmetric hero collage",
+      "max_content_width": "1440px",
+      "columns": "5-part navigation, 12-column hero, 3-column feature grid; single-column mobile",
+      "gutter": "clamp(20px, 5vw, 72px)",
+      "breakpoints": ["480px", "768px", "1024px", "1440px"],
+      "alignment_tendency": "mixed: formal centered navigation and footer, asymmetric hero, strict feature sheet"
+    },
+    "shape": {
+      "border_radius": {"small": "0px", "medium": "0px", "large": "0px", "pill": "999px"},
+      "border_usage": "Square-cornered panels with thin cobalt rules; rounded geometry is avoided except circular artwork and interaction traces.",
+      "divider_style": "1px solid currentColor with editorial crop marks and occasional double rules"
+    },
+    "elevation": {
+      "shadow_style": "minimal hard editorial shadow",
+      "levels": {
+        "low": "0 4px 14px rgba(0,0,0,0.18)",
+        "medium": "10px 12px 0 rgba(0,0,242,0.18)",
+        "high": "18px 22px 0 rgba(0,0,0,0.16)"
+      },
+      "depth_cues": "Color inversion, poster layering, oversized cropped type, hard offset shadows, and transparent ink overlays"
+    },
+    "iconography": {
+      "style": "engraved line art, tiny platform glyphs, arrows, and hand-drawn arcs",
+      "stroke_weight": "1–1.5px with intentionally irregular decorative strokes",
+      "size_scale": ["12px", "16px", "20px", "32px", "64px"],
+      "preferred_set": "custom inline SVG and CSS-drawn editorial marks"
+    },
+    "motion": {
+      "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+      "duration_scale": {"micro": "150ms", "normal": "420ms", "macro": "1100ms"},
+      "entrance_pattern": "ink-wipe clip reveal, line draw, and stepped poster assembly",
+      "exit_pattern": "fast opacity reduction or clipped vertical departure",
+      "philosophy": "Editorial and tactile: mostly static print composition with selective hand-drawn and scroll-reveal moments."
+    },
+    "components": {
+      "button_style": "Paper-white rectangular button on cobalt, blue serif/mono label, hard shadow, leading pictogram, no radius.",
+      "input_style": "White command-strip panel with blue monospace copy, tab underline, square edges, and copy affordance.",
+      "card_style": "White printed sheet with blue text, etched/halftone image block, overline index, large serif heading, and concise monospaced body.",
+      "navigation_pattern": "Unboxed five-part horizontal navigation with centered two-line wordmark and small uppercase serif links.",
+      "modal_style": "Full-screen cobalt editorial plate with white rule frame.",
+      "list_style": "Numbered research-note sequence in a three-column paper grid.",
+      "component_notes": "Tiptrip maps become two-ink technical diagrams; attractions stay cobalt and food retains a controlled coral-red exception."
+    }
+  },
+  "design_style": {
+    "aesthetic": {
+      "mood": ["mythic", "intellectual", "radical", "editorial", "experimental"],
+      "visual_metaphor": "An open-source research manifesto printed as a limited-run cobalt risograph poster.",
+      "era_influence": "Neoclassical engraving, 1970s speculative-technology publishing, early desktop terminals, and contemporary web brutalism.",
+      "genre": "neo-classical tech editorial / digital risograph",
+      "personality_traits": ["scholarly", "rebellious", "art-directed", "self-assured", "curious"],
+      "adjectives": ["cobalt", "engraved", "mythological", "printed", "monumental", "two-ink"]
+    },
+    "visual_language": {
+      "complexity": "rich",
+      "ornamentation": "decorative but disciplined",
+      "whitespace_usage": "large unoccupied cobalt fields around monumental focal art; tight white feature sheets",
+      "visual_weight_distribution": "large serif type competes deliberately with a single etched illustration or interface plate",
+      "focal_strategy": "single collage hero followed by rhythmic printed modules",
+      "contrast_level": "extreme",
+      "texture_usage": "heavy halftone, scanline, engraving hatch, paper grain, and low-opacity ink overprint"
+    },
+    "composition": {
+      "hierarchy_method": "serif scale contrast, two-tone inversion, numbered overlines, and oversized word crops",
+      "balance_type": "asymmetric hero / symmetric editorial grids",
+      "flow_direction": "top-to-bottom manifesto with alternating immersive and printed-sheet chapters",
+      "grouping_strategy": "three-column feature issues, centered call-to-action plates, and layered poster art",
+      "negative_space_role": "Acts as the blue ink field that gives engraved details and white type room to feel ceremonial."
+    },
+    "imagery": {
+      "photo_treatment": "strict cobalt-and-white duotone with high threshold, halftone dots, scanlines, and clipped rectangular crops",
+      "illustration_style": "classical engraving and manga-like monochrome linework recolored as cobalt ink",
+      "graphic_elements": "radial sunbursts, orbital circles, crop marks, giant serif fragments, hand-drawn arcs, terminal strips",
+      "pattern_usage": "halftone fields, horizontal scanlines, radiating rules, and sparse paper grain",
+      "image_shape": "square editorial plates, full-bleed poster collage, and circular orbital focal points"
+    },
+    "interaction_feel": {
+      "feedback_style": "ink inversion, underline appearance, hand-drawn arc trace, and instant opacity change",
+      "hover_behavior": "underlines and irregular line marks appear; white buttons brighten without rounding or lift",
+      "transition_personality": "snappy print registration with occasional slow hand-drawn flourish",
+      "loading_style": "poster layers and etched linework assemble in sequence",
+      "microinteraction_density": "moderate and focused on links, download controls, tabs, and cursor traces"
+    },
+    "brand_voice_in_ui": {
+      "tone": "declarative, literate, open-source confident",
+      "formality": "editorial formal with technical annotations",
+      "cta_style": "direct imperative framed as a printed label",
+      "empty_state_approach": "terminal-like instruction on an otherwise clean paper panel",
+      "error_tone": "concise diagnostic note with a clear recovery command"
+    }
+  },
+  "visual_effects": {
+    "overview": {
+      "effect_intensity": "moderate",
+      "performance_tier": "medium",
+      "fallback_strategy": "Disable pointer canvas, animated ink grain, video, and parallax; preserve static duotone poster composition.",
+      "primary_technology": "CSS, Canvas 2D, SVG, and HTML video"
+    },
+    "background_effects": {
+      "type": "noise-field",
+      "description": "Cobalt fields carry subtle analog paper/ink noise rather than gradients, reinforcing a screen-printed surface.",
+      "technology": "CSS noise texture and optional Canvas speckle",
+      "params": {"color_palette": ["#0000F2", "#F5F5F5"], "speed": "very slow", "density": "fine", "opacity": "0.04", "blend_mode": "multiply"}
+    },
+    "particle_systems": {
+      "enabled": false,
+      "type": "none",
+      "description": "No atmospheric particle cloud; marks are authored as print texture and pointer strokes.",
+      "technology": "none",
+      "params": {"count": 0, "shape": "none", "size_range": "0", "movement_pattern": "none", "color_behavior": "none", "interaction": "none", "spawn_area": "none"}
+    },
+    "3d_elements": {
+      "enabled": false,
+      "type": "none",
+      "description": "Visual depth is collage-based rather than true 3D.",
+      "technology": "CSS layering",
+      "params": {"renderer": "CSS", "lighting": "flat two-ink", "camera": "orthographic editorial view", "materials": "paper and ink", "geometry": "flat plates", "post_processing": [], "interaction_model": "none"}
+    },
+    "shader_effects": {
+      "enabled": false,
+      "type": "none",
+      "description": "No confirmed WebGL shader; duotone and halftone are image/CSS treatments.",
+      "technology": "CSS filters and prepared assets",
+      "params": {"uniforms": {}, "vertex_manipulation": "none", "fragment_output": "none", "noise_type": "none", "distortion": "none"}
+    },
+    "scroll_effects": {
+      "parallax": {"enabled": true, "layers": "3", "depth_range": "0.05–0.18", "speed_curve": "subtle linear-to-ease-out"},
+      "scroll_triggered_animations": {"enabled": true, "trigger_points": "10–20% visibility", "animation_type": "clip-reveal, poster-slide, draw-SVG", "scrub_behavior": "mostly triggered; large word crops use light scrub"},
+      "scroll_morphing": {"enabled": false, "description": "Chapters cut between composed editorial plates instead of morphing continuously."}
+    },
+    "text_effects": {
+      "type": "split-line-animate",
+      "description": "Display-serif lines reveal through vertical masks; giant words are intentionally cropped at viewport edges.",
+      "technology": "CSS clip-path and IntersectionObserver",
+      "params": {"split_strategy": "by-line", "animation_per_unit": "translateY(108%) to 0", "stagger": "80ms", "effect_style": "ink-wipe poster reveal"}
+    },
+    "cursor_effects": {
+      "enabled": true,
+      "type": "trail",
+      "description": "A fixed full-viewport Canvas draws brief irregular hand-mark traces near interactive regions.",
+      "params": {"shape": "short ink dash and arc", "size": "1–3px", "blend_mode": "normal", "trail": "rapid fade", "interaction_zone": "desktop pointer surfaces"}
+    },
+    "image_effects": {
+      "type": "reveal-clip",
+      "description": "Duotone image plates reveal as sharp rectangular crops with scanline or halftone overlay.",
+      "technology": "CSS filters, repeating gradients, and clip-path",
+      "params": {"filter_pipeline": "grayscale → contrast → cobalt/white duotone", "hover_transform": "subtle 1.02 scale and ink density change", "reveal_animation": "rectangular wipe", "distortion_type": "scanline"}
+    },
+    "glassmorphism_neumorphism": {
+      "enabled": false,
+      "style": "none",
+      "params": {"blur_radius": "0px", "transparency": "0", "border_treatment": "solid editorial rules", "shadow_type": "hard offset", "light_source_angle": "none"}
+    },
+    "canvas_drawings": {
+      "enabled": true,
+      "type": "generative-lines",
+      "description": "A fixed transparent canvas renders temporary pointer handwriting and registration marks.",
+      "technology": "Canvas 2D",
+      "params": {"draw_method": "polyline strokes with fading alpha", "animation_loop": "requestAnimationFrame only while marks remain", "color_scheme": "paper white on cobalt / cobalt on paper", "responsiveness": "ResizeObserver and devicePixelRatio scaling", "interaction": "pointer trail on fine pointers; disabled for touch and reduced motion"}
+    },
+    "svg_animations": {
+      "enabled": true,
+      "type": "path-draw",
+      "description": "Hand-drawn arcs, radial route rays, and map paths animate through stroke-dashoffset.",
+      "params": {"animation_method": "stroke-dashoffset", "path_morphing": "none", "stroke_animation": "irregular path reveal", "filter_effects": "none"}
+    },
+    "composite_notes": "Observed source effects include a fixed full-viewport Canvas, repeating hand-drawn arc animations around controls, a non-autoplay desktop showcase video, an autoplay looping portal artwork video, duotone etched imagery, and strong paper/cobalt color inversion. The Tiptrip adaptation implements original route engraving, scanline UI plates, and pointer ink traces without copying the source's figurative artwork."
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "name": "Tiptrip — Longbow Roadster Adaptation",
+    "description": "An editorial automotive presentation language adapted into a route-first Android travel product website: engineering grid, silver monochrome, condensed display type, instrument-like labels, and cinematic scroll pacing with Tiptrip blue as the sole brand accent.",
+    "source_references": [
+      "https://db-longbow.webflow.io/roadster",
+      "Tiptrip Android app icon and current product feature set"
+    ],
+    "created_at": "2026-07-13"
+  },
+  "design_system": {
+    "color": {
+      "palette_type": "monochromatic with single cool accent",
+      "primary": {"hex": "#8B8F92", "role": "machined-silver hero field and neutral visual stage"},
+      "secondary": {"hex": "#050505", "role": "cinematic information sections and high-contrast footer"},
+      "accent": {"hex": "#087BFF", "role": "Tiptrip route line, active controls, CTA emphasis, and product identity"},
+      "neutral": {
+        "scale": ["#FFFFFF", "#E9EAEB", "#B8BBBE", "#8B8F92", "#4C4F52", "#202224", "#0C0D0F", "#050505"],
+        "usage": "White for display text, silver for image fields, graphite for dividers and secondary copy, near-black for long-form sections."
+      },
+      "semantic": {"success": "#33C887", "warning": "#F4B844", "error": "#FF5252", "info": "#087BFF"},
+      "surface": {"background": "#8B8F92", "card": "#0C0D0F", "elevated": "rgba(20,21,23,0.84)"},
+      "contrast_strategy": "Extreme black/white contrast with translucent charcoal overlays; blue is reserved for directional meaning."
+    },
+    "typography": {
+      "type_scale": {
+        "display": {"size": "clamp(6rem, 20vw, 18rem)", "weight": "400", "line_height": "0.75", "tracking": "-0.035em"},
+        "heading_1": {"size": "clamp(3.8rem, 11vw, 10rem)", "weight": "400", "line_height": "0.82", "tracking": "-0.03em"},
+        "heading_2": {"size": "clamp(2.25rem, 6vw, 5rem)", "weight": "400", "line_height": "0.9", "tracking": "-0.025em"},
+        "heading_3": {"size": "clamp(1.5rem, 3vw, 2.4rem)", "weight": "400", "line_height": "1.0", "tracking": "-0.02em"},
+        "body": {"size": "1rem", "weight": "400", "line_height": "1.65", "tracking": "-0.015em"},
+        "body_small": {"size": "0.84rem", "weight": "400", "line_height": "1.55", "tracking": "-0.02em"},
+        "caption": {"size": "0.68rem", "weight": "500", "line_height": "1.35", "tracking": "0.02em"},
+        "overline": {"size": "0.64rem", "weight": "600", "line_height": "1.2", "tracking": "0.08em"}
+      },
+      "font_families": {
+        "heading": "'Bebas Neue', 'Arial Narrow', sans-serif",
+        "body": "'Noto Serif SC', 'Songti SC', serif",
+        "mono": "'IBM Plex Mono', 'SFMono-Regular', monospace"
+      },
+      "font_style_notes": "Condensed display capitals supply automotive scale; a restrained Chinese serif adds editorial warmth; monospaced labels behave like route telemetry."
+    },
+    "spacing": {
+      "base_unit": "4px",
+      "scale": ["4px", "8px", "12px", "16px", "24px", "32px", "48px", "64px", "96px", "144px"],
+      "content_density": "spacious stages with compact data clusters",
+      "section_rhythm": "Full-viewport visual beats alternate with 96–144px editorial sections and dense 24–32px specification rows."
+    },
+    "layout": {
+      "grid_system": "8-column engineering grid with visible rules and square intersections",
+      "max_content_width": "1600px",
+      "columns": "8 desktop, 4 tablet, 2 mobile",
+      "gutter": "0px for visual stages; 24–48px internal component padding",
+      "breakpoints": ["480px", "760px", "1024px", "1440px"],
+      "alignment_tendency": "strict grid with deliberate oversized crop and asymmetric copy placement"
+    },
+    "shape": {
+      "border_radius": {"small": "4px", "medium": "10px", "large": "18px", "pill": "999px"},
+      "border_usage": "Hairline grid borders dominate; radius is reserved for floating navigation, phone hardware, and marker chips.",
+      "divider_style": "1px rgba(255,255,255,0.18) full-bleed rules"
+    },
+    "elevation": {
+      "shadow_style": "soft diffused only on floating hardware",
+      "levels": {
+        "low": "0 8px 24px rgba(0,0,0,0.16)",
+        "medium": "0 28px 70px rgba(0,0,0,0.28)",
+        "high": "0 48px 120px rgba(0,0,0,0.42)"
+      },
+      "depth_cues": "Overlapping layers, sticky scale changes, translucent surfaces, and route-line glow"
+    },
+    "iconography": {
+      "style": "minimal geometric route glyphs and instrument markers",
+      "stroke_weight": "1.5px",
+      "size_scale": ["16px", "20px", "24px", "32px", "48px"],
+      "preferred_set": "custom inline SVG with rounded joins"
+    },
+    "motion": {
+      "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+      "duration_scale": {"micro": "160ms", "normal": "520ms", "macro": "1100ms"},
+      "entrance_pattern": "clip reveal and vertical rise with controlled stagger",
+      "exit_pattern": "opacity falloff with slight upward drift",
+      "philosophy": "cinematic but mechanical; movement explains sequence and direction"
+    },
+    "components": {
+      "button_style": "White rectangular utility CTA on dark surfaces; blue route CTA for the product moment; arrow or plus on the trailing edge.",
+      "input_style": "Dark telemetry panel with monospaced label, subtle border, and blue focus state.",
+      "card_style": "Border-defined grid cell, near-zero decoration, oversized numeral, compact instrument metadata.",
+      "navigation_pattern": "Centered fixed translucent capsule with menu label, brand mark, and compact CTA.",
+      "modal_style": "Full-viewport charcoal sheet with strict grid and oversized title.",
+      "list_style": "Numbered itinerary rows linked by a continuous blue route rail.",
+      "component_notes": "Product mockups use real UI copy, blue attraction markers, red food markers, and route segments that animate in order."
+    }
+  },
+  "design_style": {
+    "aesthetic": {
+      "mood": ["precise", "cinematic", "confident", "quiet", "directional"],
+      "visual_metaphor": "A route-planning instrument presented like a lightweight performance machine.",
+      "era_influence": "Contemporary automotive editorial with analog technical-sheet references.",
+      "genre": "luxury industrial product launch",
+      "personality_traits": ["decisive", "meticulous", "self-possessed", "practical"],
+      "adjectives": ["machined", "monochrome", "overscaled", "gridded", "kinetic"]
+    },
+    "visual_language": {
+      "complexity": "moderate",
+      "ornamentation": "subtle technical accents",
+      "whitespace_usage": "expansive negative space broken by full-bleed product stages",
+      "visual_weight_distribution": "one dominant image or phone object per viewport with compact metadata at edges",
+      "focal_strategy": "single hero element followed by progressive reveal",
+      "contrast_level": "very high",
+      "texture_usage": "light film grain and faint coordinate grid"
+    },
+    "composition": {
+      "hierarchy_method": "scale contrast, crop, spatial isolation, and typographic layering",
+      "balance_type": "asymmetric within a strict modular grid",
+      "flow_direction": "vertical cinematic sequence with route-like downward progression",
+      "grouping_strategy": "feature pairs grouped as instrument cards and day-by-day route segments",
+      "negative_space_role": "Creates premium pacing and makes each product behavior feel singular."
+    },
+    "imagery": {
+      "photo_treatment": "desaturated silver stage, hard directional crop, minimal backdrop",
+      "illustration_style": "UI-native map diagrams and route paths rather than decorative illustration",
+      "graphic_elements": "visible grid lines, node squares, huge cropped type, coordinate labels, numbered markers",
+      "pattern_usage": "repeating engineering grid and telemetry ticker",
+      "image_shape": "full-bleed rectangular field with hardware silhouette layered above"
+    },
+    "interaction_feel": {
+      "feedback_style": "immediate color inversion and route-line response",
+      "hover_behavior": "magnetic lift, trailing arrow shift, and highlighted grid cell",
+      "transition_personality": "smooth glide with precise stops",
+      "loading_style": "route path draws first, content follows",
+      "microinteraction_density": "selective; concentrated on navigation, CTA, itinerary reorder, and map markers"
+    },
+    "brand_voice_in_ui": {
+      "tone": "direct, calm, useful",
+      "formality": "modern conversational",
+      "cta_style": "short direct imperative",
+      "empty_state_approach": "one clear next action with an example request",
+      "error_tone": "plain-language recovery guidance without blame"
+    }
+  },
+  "visual_effects": {
+    "overview": {
+      "effect_intensity": "moderate",
+      "performance_tier": "lightweight",
+      "fallback_strategy": "Disable scroll transforms and route drawing; retain static high-contrast composition.",
+      "primary_technology": "CSS, SVG, and vanilla JavaScript"
+    },
+    "background_effects": {
+      "type": "noise-field",
+      "description": "A nearly invisible film-grain layer softens the flat silver and black surfaces.",
+      "technology": "CSS data-URI texture",
+      "params": {"color_palette": ["#FFFFFF", "#050505"], "speed": "static", "density": "fine", "opacity": "0.045", "blend_mode": "soft-light"}
+    },
+    "particle_systems": {
+      "enabled": false,
+      "type": "none",
+      "description": "No particle system; the route nodes provide sufficient visual activity.",
+      "technology": "none",
+      "params": {"count": 0, "shape": "none", "size_range": "0", "movement_pattern": "none", "color_behavior": "none", "interaction": "none", "spawn_area": "none"}
+    },
+    "3d_elements": {
+      "enabled": false,
+      "type": "none",
+      "description": "Depth is simulated through CSS perspective on the phone mockup.",
+      "technology": "CSS transforms",
+      "params": {"renderer": "CSS", "lighting": "soft highlight", "camera": "fixed perspective", "materials": "matte graphite", "geometry": "rounded phone slab", "post_processing": [], "interaction_model": "pointer tilt"}
+    },
+    "shader_effects": {
+      "enabled": false,
+      "type": "none",
+      "description": "No shader is required for this lightweight adaptation.",
+      "technology": "none",
+      "params": {"uniforms": {}, "vertex_manipulation": "none", "fragment_output": "none", "noise_type": "none", "distortion": "none"}
+    },
+    "scroll_effects": {
+      "parallax": {"enabled": true, "layers": "3", "depth_range": "0.08–0.24", "speed_curve": "slow foreground / slower grid"},
+      "scroll_triggered_animations": {"enabled": true, "trigger_points": "15% element visibility", "animation_type": "clip-reveal, fade-up, draw-SVG", "scrub_behavior": "triggered once; sticky scenes use scrubbed CSS variables"},
+      "scroll_morphing": {"enabled": true, "description": "The central route motif shifts from prompt to recommendations to mapped itinerary while the phone remains visually anchored."}
+    },
+    "text_effects": {
+      "type": "split-line-animate",
+      "description": "Oversized titles reveal by line through a clipping mask; telemetry ticker moves continuously.",
+      "technology": "CSS and IntersectionObserver",
+      "params": {"split_strategy": "by-line", "animation_per_unit": "translateY(110%) to 0", "stagger": "90ms", "effect_style": "hard clip with smooth deceleration"}
+    },
+    "cursor_effects": {
+      "enabled": true,
+      "type": "spotlight",
+      "description": "A restrained blue halo follows the pointer only on the desktop hero stage.",
+      "params": {"shape": "radial", "size": "260px", "blend_mode": "screen", "trail": "none", "interaction_zone": "hero and feature stage"}
+    },
+    "image_effects": {
+      "type": "parallax-tilt",
+      "description": "The phone hardware tilts by a maximum of four degrees and settles on pointer leave.",
+      "technology": "CSS transform plus pointer events",
+      "params": {"filter_pipeline": "grayscale-neutral surfaces with blue retained", "hover_transform": "rotateX/rotateY + translateY", "reveal_animation": "scale 0.96 to 1 with opacity", "distortion_type": "none"}
+    },
+    "glassmorphism_neumorphism": {
+      "enabled": true,
+      "style": "frosted-layers",
+      "params": {"blur_radius": "18px", "transparency": "0.16", "border_treatment": "1px rgba(255,255,255,0.12)", "shadow_type": "soft diffused", "light_source_angle": "top-left"}
+    },
+    "canvas_drawings": {
+      "enabled": false,
+      "type": "none",
+      "description": "All maps are semantic HTML and SVG for crisp rendering and accessibility.",
+      "technology": "none",
+      "params": {"draw_method": "none", "animation_loop": "none", "color_scheme": "none", "responsiveness": "none", "interaction": "none"}
+    },
+    "svg_animations": {
+      "enabled": true,
+      "type": "path-draw",
+      "description": "The Tiptrip blue route draws through numbered attraction nodes while food nodes pulse red.",
+      "params": {"animation_method": "stroke-dashoffset", "path_morphing": "none", "stroke_animation": "route draw and marker halo", "filter_effects": "subtle blue glow"}
+    },
+    "composite_notes": "The implementation deliberately borrows the reference's structural DNA—not its automotive assets. It substitutes an original HTML/CSS phone and route system, keeping performance lightweight. Reduced-motion users receive a static route and immediately visible content."
+  }
+}
